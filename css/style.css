@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  max-width: 100%;
+  overflow: hidden;
+}
+.banner {
+  min-height: 100vh;
+  background: #120e0f url(/img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 40px 100px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+header {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 120px;
+}
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  background: #120e0f;
+  transform: translateY(-6px);
+  transition: 0.5s;
+}
+.toggle.active::before {
+  transform: translateY(0) rotate(45deg);
+}
+.toggle::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  background: #120e0f;
+  transform: translateY(6px);
+  transition: 0.5s;
+}
+.toggle.active::after {
+  transform: translateY(0) rotate(-45deg);
+}
+.navigation {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #120e0f url(/img/menuBg.jpg);
+  background-position: right;
+  background-size: cover;
+  display: none;
+  padding-right: 100px;
+}
+.navigation.active {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.navigation li {
+  list-style: none;
+  margin: 4px 0;
+}
+.navigation li a {
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.navigation li a:hover {
+  color: #e83c88;
+}
+.content {
+  position: relative;
+  max-width: 700px;
+}
+.content .imgText {
+  max-width: 600px;
+}
+.content p {
+  color: white;
+  font-size: 1.2em;
+  line-height: 1.75em;
+}
+.btn {
+  position: relative;
+  background: #e83c88;
+  color: #fff;
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #d43071;
+}
+.btn ion-icon {
+  font-size: 2em;
+  margin-right: 5px;
+}
+.clip {
+  position: absolute;
+  right: 100px;
+  bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.clip .clipBox {
+  position: relative;
+  width: 340px;
+  height: 220px;
+  border: 8px solid white;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #e83c88;
+}
+.clip .clipBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.clip .clipBox ion-icon {
+  font-size: 4em;
+  color: #fff;
+}
+.clip .clipBox:hover img {
+  opacity: 0.4;
+}
+.social-links {
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.social-links li {
+  list-style: none;
+}
+.social-links li a {
+  font-size: 2em;
+  color: white;
+}
+.social-links li a:hover {
+  color: #e83c88;
+}
+.ticket-cart {
+  height: 100vh;
+  width: 22vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #120e0f;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+  z-index: 999;
+}
+.cart-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  border-bottom: 1px solid #e83c88;
+}
+.cart-text p:hover {
+  color: #e83c88;
+  cursor: pointer;
+}
+.cart-text .close-Cart {
+  background-color: #120e0f;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.close-Cart:hover {
+  animation-name: spin;
+  animation-duration: 1500ms;
+  color: #e83c88;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.empty-cart {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  color: white;
+}
+.empty-cart:hover {
+  color: #e83c88;
+  cursor: pointer;
+}
+.animateMe {
+  transform: translate(0%);
+  z-index: 9;
+}
