@@ -1,15 +1,19 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Setting Default Margin and Padding Zero */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+/* Body Styling */
 body {
   max-width: 100%;
   overflow: hidden;
 }
+/* Main Banner */
 .banner {
   min-height: 100vh;
   background: #120e0f url(/img/bg.jpg);
@@ -22,15 +26,18 @@ body {
   position: relative;
   overflow: hidden;
 }
+/* Header */
 header {
   position: absolute;
   top: 40px;
   display: flex;
   align-items: center;
 }
+/* Header Logo On Right Side of Toggle */
 .logo img {
   width: 120px;
 }
+/* Toogle Icon  On Right Side of Header Logo*/
 .toggle {
   position: relative;
   width: 50px;
@@ -43,6 +50,7 @@ header {
   justify-content: center;
   align-items: center;
 }
+/* Toogle Before */
 .toggle::before {
   content: "";
   position: absolute;
@@ -52,9 +60,11 @@ header {
   transform: translateY(-6px);
   transition: 0.5s;
 }
+/* Toggle Active Before*/
 .toggle.active::before {
   transform: translateY(0) rotate(45deg);
 }
+/* Toggle After */
 .toggle::after {
   content: "";
   position: absolute;
@@ -64,9 +74,11 @@ header {
   transform: translateY(6px);
   transition: 0.5s;
 }
+/* Toggle Active After */
 .toggle.active::after {
   transform: translateY(0) rotate(-45deg);
 }
+/* Nav Menu */
 .navigation {
   position: fixed;
   z-index: 9;
@@ -80,16 +92,19 @@ header {
   display: none;
   padding-right: 100px;
 }
+/* Nav Menu Active */
 .navigation.active {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
 }
+/* Nav Menu Li */
 .navigation li {
   list-style: none;
   margin: 4px 0;
 }
+/* Nav Menu Anchor Tag */
 .navigation li a {
   color: #fff;
   font-size: 2em;
@@ -98,21 +113,26 @@ header {
   font-weight: 600;
   text-transform: uppercase;
 }
+/* Nav Menu Anchor Tag:hover */
 .navigation li a:hover {
   color: #e83c88;
 }
+/* Content Styling */
 .content {
   position: relative;
   max-width: 700px;
 }
+/* Content Image Text */
 .content .imgText {
   max-width: 600px;
 }
+/* Content Paragraph */
 .content p {
   color: white;
   font-size: 1.2em;
   line-height: 1.75em;
 }
+/* Button */
 .btn {
   position: relative;
   background: #e83c88;
@@ -125,13 +145,16 @@ header {
   font-weight: 400;
   text-decoration: none;
 }
+/* Button Hover */
 .btn:hover {
   background: #d43071;
 }
+/* Button Icon */
 .btn ion-icon {
   font-size: 2em;
   margin-right: 5px;
 }
+/* Clip */
 .clip {
   position: absolute;
   right: 100px;
@@ -140,6 +163,7 @@ header {
   flex-wrap: wrap;
   gap: 40px;
 }
+/* Clipbox Styling */
 .clip .clipBox {
   position: relative;
   width: 340px;
@@ -152,6 +176,7 @@ header {
   cursor: pointer;
   background: #e83c88;
 }
+/* Clipbox Image */
 .clip .clipBox img {
   position: absolute;
   top: 0;
@@ -160,13 +185,16 @@ header {
   height: 100%;
   object-fit: cover;
 }
+/* ClipBox Icon */
 .clip .clipBox ion-icon {
   font-size: 4em;
   color: #fff;
 }
+/* ClipBox Icon Hover */
 .clip .clipBox:hover img {
   opacity: 0.4;
 }
+/* Social Links */
 .social-links {
   position: absolute;
   bottom: 40px;
@@ -175,16 +203,20 @@ header {
   align-items: center;
   gap: 40px;
 }
+/* Social Links li */
 .social-links li {
   list-style: none;
 }
+/* Social Links Anchor Tag */
 .social-links li a {
   font-size: 2em;
   color: white;
 }
+/* Social Link Anchr Tag Hover */
 .social-links li a:hover {
   color: #e83c88;
 }
+/* Right Side Drawer */
 .ticket-cart {
   height: 100vh;
   width: 22vw;
@@ -196,6 +228,7 @@ header {
   transition: 0.3s ease-in-out;
   z-index: 999;
 }
+/* Right Side Drawer Text */
 .cart-text {
   display: flex;
   flex-direction: row;
@@ -205,10 +238,12 @@ header {
   color: white;
   border-bottom: 1px solid #e83c88;
 }
+/* Right Side Drawer Text */
 .cart-text p:hover {
   color: #e83c88;
   cursor: pointer;
 }
+/* Right Side Drawer Close */
 .cart-text .close-Cart {
   background-color: #120e0f;
   border: none;
@@ -218,11 +253,13 @@ header {
   font-weight: 300;
   cursor: pointer;
 }
+/* Close Cart Hover Animation */
 .close-Cart:hover {
   animation-name: spin;
   animation-duration: 1500ms;
   color: #e83c88;
 }
+/* Animation Value */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -231,16 +268,19 @@ header {
     transform: rotate(360deg);
   }
 }
+/* Cart Text */
 .empty-cart {
   position: absolute;
   top: 50%;
   left: 30%;
   color: white;
 }
+/* Cart Color On Hover */
 .empty-cart:hover {
   color: #e83c88;
   cursor: pointer;
 }
+/* Right Side Drawer Animation */
 .animateMe {
   transform: translate(0%);
   z-index: 9;

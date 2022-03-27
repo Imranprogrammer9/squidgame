@@ -1,3 +1,4 @@
+// For Menu Toggle (Navigation)
 let menuToggle = document.querySelector('.toggle');
 let navigation = document.querySelector('.navigation');
 menuToggle.onclick = function () {
@@ -5,6 +6,7 @@ menuToggle.onclick = function () {
     navigation.classList.toggle('active');
 }
 
+// For Right Side Drawer
 let button = document.querySelector('.btn');
 let cart = document.querySelector('.ticket-cart');
 button.addEventListener('click', () => {
